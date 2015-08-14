@@ -12,6 +12,10 @@ module.exports = function(grunt){
             build: {
                 src: 'client/scripts/admin.js',
                 dest: 'server/public/assets/scripts/admin.min.js'
+            },
+            build: {
+                src: 'client/styles/style.css',
+                dest: 'server/public/assets/styles/style.min.css'
             }
         },
         copy: {

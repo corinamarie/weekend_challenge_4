@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 
 <html>
-<head>
-    <title>online message board</title>
+    <head>
+        <title>online message board</title>
 
-    <script type="text/javascript" src="vendors/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="/assets/scripts/app.min.js"></script>
-</head>
+        <!--STYLES-->
+        <link href="/assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="/assets/styles/style.min.css" rel="stylesheet" type="text/css">
 
-<body>
-<p>this is the admin page</p>
-<form id="inputForm" method="POST">
-    <label for="name">username:</label>
-    <input name="name" id="name" type="text">
-    <label for="message">message:</label>
-    <input name="message" id="message" type="text">
-    <input type="submit" id="submit" value="submit">
-</form>
+    </head>
 
-<div class="allTheData"></div>
-</body>
+    <body>
+        <p>sort of working... not now... but NOW</p>
+        <form id="inputForm" method="POST">
+            <label for="name">username:</label>
+            <input name="name" id="name" type="text">
+            <label for="message">message:</label>
+            <input name="message" id="message" type="text">
+            <input type="submit" id="submit" value="submit">
+        </form>
+
+        <div class="allTheData"></div>
+
+        <!--SCRIPTS-->
+        <script type="text/javascript" src="vendors/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="/assets/scripts/admin.min.js"></script>
+    </body>
 </html>

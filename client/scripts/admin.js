@@ -57,7 +57,7 @@ function postToDOM(data){
         $(".allTheData").append("<div></div>");
         var $el = $(".allTheData").children().last();
         $el.append("<p class='dataUnit'>" + data[i].name + "</p>");
-        $el.append("<p class='messagedata'>" + data[i].message + "</p>");
+        $el.append("<p class='messagedata '>" + data[i].message + "</p>");
         $el.append("<button data-id=" + data[i]._id + ">delete</button>");
     }
 }

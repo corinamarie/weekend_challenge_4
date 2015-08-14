@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+    //this is the submit button functionality to write each entry to the db via serializing and ajax
     $("#inputForm").submit(function(event){
         event.preventDefault();
         var formData = $("#inputForm").serialize();
@@ -13,6 +15,7 @@ $(document).ready(function(){
         });
     });
 
+    //this is the ajax call to delete item by db _id from db
     $(".allTheData").on("click", "button", function(){
         $.ajax({
             type: "DELETE",
@@ -30,9 +33,11 @@ $(document).ready(function(){
         $(this).parent().remove();
     });
 
+    //refreshes data each page refresh
     getData();
 });
 
+//this is a function that does an ajax call to grab data from db in things.js
 function getData (){
     $.ajax({
         type: "GET",
@@ -44,6 +49,8 @@ function getData (){
     });
 }
 
+//this is a function that clears the dom, then loops through all the data on the db/message schema and appends to the DOM
+//admin version includes appending a delete button linked by db _id to its parent object
 function postToDOM(data){
     $(".allTheData").empty();
     for(var i = 0; i < data.length; i++){
@@ -54,3 +61,6 @@ function postToDOM(data){
         $el.append("<button data-id=" + data[i]._id + ">delete</button>");
     }
 }
+
+
+

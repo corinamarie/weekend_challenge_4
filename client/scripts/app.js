@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+    //this is the submit button functionality to write each entry to the db via serializing and ajax
     $("#inputForm").submit(function(event){
         event.preventDefault();
         var formData = $("#inputForm").serialize();
@@ -13,9 +15,11 @@ $(document).ready(function(){
         });
     });
 
+    //refreshes data each page refresh
     getData();
 });
 
+//this is a function that does an ajax call to grab data from db in things.js
 function getData (){
     $.ajax({
         type: "GET",
@@ -27,6 +31,7 @@ function getData (){
     });
 }
 
+//this is a function that clears the dom, then loops through all the data on the db/message schema and appends to the DOM
 function postToDOM(data){
     $(".allTheData").empty();
     for(var i = 0; i < data.length; i++){

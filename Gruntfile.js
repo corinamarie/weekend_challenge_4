@@ -8,6 +8,10 @@ module.exports = function(grunt){
             build: {
                 src: 'client/scripts/app.js',
                 dest: 'server/public/assets/scripts/app.min.js'
+            },
+            build: {
+                src: 'client/scripts/admin.js',
+                dest: 'server/public/assets/scripts/admin.min.js'
             }
         },
         copy: {
